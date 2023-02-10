@@ -11,12 +11,10 @@ impl dice {
         Self { value: 0, throw_count: 0 }
     }
 
-    pub fn throw_dice(&mut self) -> usize
+    pub fn throw_dice(&mut self)
     {
         self.value = rand::thread_rng().gen_range(1..=6);
         self.throw_count += 1;
-
-        self.value
     }
 
 }
